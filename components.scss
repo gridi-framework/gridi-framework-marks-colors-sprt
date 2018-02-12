@@ -1,0 +1,6 @@
+@each $palette-color-prefix, $palette-color-variables in get-colors-palette($mark-colors-support-extra-colors-palette, $mark-colors-support-skip-colors-palette) {
+    .#{$colors-class-prefix}-#{$palette-color-prefix} mark,
+    mark.#{$colors-class-prefix}-#{$palette-color-prefix} {
+        @include mark-colors-propertys(parse-map($mark-colors-support-parser, $palette-color-variables));
+    }
+}
